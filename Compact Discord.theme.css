@@ -49,15 +49,6 @@
 /* Radial Status */
 /*@import url("https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css");
 
-/* Servers List */
-@import url(//dablulite.github.io/css-snippets/ServersList/import.css);
-:root {
-  --guild-list-width: 290px;
-  --guild-list-height: 48px;
-  --guild-item-radius: 50px;
-  --guild-item-spacing: 8px;
-}
-
 /* Account Details Grid */
 @import url(//dablulite.github.io/css-snippets/AccountDetailsGrid/import.css);
 
