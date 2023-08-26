@@ -120,7 +120,6 @@ button[id="super-reaction-picker-tab"],
 [class^="burstGlow-"] {
   display: none;
 }
-
 /* makes super reactions not disappear on hover */
 [class*="hideEmoji-"] {
   opacity: 1;
@@ -138,10 +137,6 @@ button[id="super-reaction-picker-tab"],
 /* disables clicking */
 [class^="reactionInner-"]:is([aria-label*=" super " i]) {
   pointer-events: none;
-}
-/* adds background color to super reactions */
-[class^="reaction-"]:has(> [class^="reactionInner-"]:is([aria-label*=" super " i])) {
-  background: linear-gradient(45deg, #8447c6 0%, #ab5d8b 100%) !important;
 }
 /* removes shake animation */
 [class*="shakeReaction-"] {
