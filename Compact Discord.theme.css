@@ -120,6 +120,7 @@ button[id="super-reaction-picker-tab"],
 [class^="burstGlow-"] {
   display: none;
 }
+
 /* makes super reactions not disappear on hover */
 [class*="hideEmoji-"] {
   opacity: 1;
