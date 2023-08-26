@@ -49,10 +49,179 @@
 /* Radial Status */
 /*@import url("https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css");
 
-/* Add more */
+/* Servers List */
+@import url(//dablulite.github.io/css-snippets/ServersList/import.css);
+:root {
+  --guild-list-width: 290px;
+  --guild-list-height: 48px;
+  --guild-item-radius: 50px;
+  --guild-item-spacing: 8px;
+}
 
-/* 
-@import url("https://dablulite.github.io/css-snippets/Omnibar/import.css");
+/* Account Details Grid */
+@import url(//dablulite.github.io/css-snippets/AccountDetailsGrid/import.css);
+
+/* MacOS  Titlebar */
+@import url(//dablulite.github.io/css-snippets/MacosTitlebar/import.css);
+:root {
+    --mactitlebar-left-margin: 5px;
+    --mactitlebar-top-margin: 10px;
+    --mactitlebar-button-width: 20px;
+    --mactitlebar-button-height: 20px;
+    --mactitlebar-button-border-radius: 50px;
+    --mactitlebar-close-btn-back: #f25056;
+    --mactitlebar-min-btn-back: #fac536;
+    --mactitlebar-max-btn-back: #39ea49;
+    --macbuttons-serverlist-inner-top-margin: 32px;
+    /*guilds inner ul element*/
+    --macbuttons-serverlist-outer-top-margin: 0;
+    --macbuttons-serverlist-outer-height: 100%;
+}
+
+/* Settings Sidebar */
+@import url(https://maendisease.github.io/BetterDiscordStuff/css/SettingsSidebar.css);
+
+/* Floating Folder */
+.wrapper-38slSD:active {
+    -webkit-transform: unset;
+    transform: none;
+}
+
+[id^="folder-items-"] {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+    overflow-y: auto;
+    max-height: calc(100vh - 72px);
+    margin: auto auto auto calc(72px + 8px);
+    padding-top: 8px;
+    border-radius: 8px;
+    background: var(--background-floating);
+    -webkit-box-shadow: var(--elevation-high);
+    box-shadow: var(--elevation-high);
+}
+
+[id^="folder-items-"]::-webkit-scrollbar {
+    display: none;
+}
+
+.folderIconWrapper-1oRIZr {
+    transform: rotate(-90deg);
+}
+
+.closedFolderIconWrapper-3tRb2d .icon-1zKOXL,
+.expandedFolderIconWrapper-3RwQpD svg {
+    transform: rotate(90deg);
+}
+
+/* Minimal Auth Apps */
+@import url("https://minidiscordthemes.github.io/Snippets/MinimalAuthApps/MinimalAuthApps.css");
+
+/* removes a bunch of stuff */
+[class^="message-"] div[aria-label*="super" i]:has([class^="icon-"]),
+[class^="reactButtons-"] > div[aria-label*="super" i],
+[class^="reactionInner-"] [class^="effectsWrapper-"],
+[class^="burstReactionTooltipPrompt-"],
+[class^="burstEmojiSection-"],
+[class*="colorPremiumGradient-"],
+button[id="super-reaction-picker-tab"],
+[class^="burstGlow-"] {
+  display: none;
+}
+/* makes super reactions not disappear on hover */
+[class*="hideEmoji-"] {
+  opacity: 1;
+}
+/* removes stuff from emoji hover popup */
+[class*="burstReactionTooltipSpacer-"] {
+  border: none !important;
+  padding: 0px;
+  margin: 0px;
+}
+/* makes background color the same as normal reactions in "show reactions" tab*/
+[class^="reactionSelected-"] {
+  background: var(--background-tertiary) !important;
+}
+/* disables clicking */
+[class^="reactionInner-"]:is([aria-label*=" super " i]) {
+  pointer-events: none;
+}
+/* adds background color to super reactions */
+[class^="reaction-"]:has(> [class^="reactionInner-"]:is([aria-label*=" super " i])) {
+  background: linear-gradient(45deg, #8447c6 0%, #ab5d8b 100%) !important;
+}
+/* removes shake animation */
+[class*="shakeReaction-"] {
+  animation: none !important;
+}
+
+/* Oneko Sleeping*/
+[class^="channelTextArea"]::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    bottom: calc(100% - 3px); /* Mess with the - 3px to change its vertical position */
+    right: 10px; /* Switch this from right to left to put it on the left side, or increase/decrease to change its position */
+    position: absolute;
+    image-rendering: pixelated;
+    background-image: url("https://raw.githubusercontent.com/adryd325/oneko.js/14bab15a755d0e35cd4ae19c931d96d306f99f42/oneko.gif");
+    animation: oneko 1s infinite; /* change 1s to make the animation slower/faster */
+}
+
+@keyframes oneko {
+    /*
+    if you open the background image in ur browser, you will see that it has way more frames
+    so if you want, you could make ur own keyframes for a different animation
+    the top left frame is 0 0, second top row is -32 0, second row second is -32 -32 and so on
+    the ...00001% makes it so that there's no transition between the frames, so if you wanted say 3 frames, you'd do 0%, 33.3%; 33.30001%, 66.6%; 66.60001%, 100%
+    */
+    0%, 50% {
+        background-position: -64px 0;
+    }
+    50.0001%, 100% {
+        background-position: -64px -32px;
+    }
+}
+
+/* expandable user panel */
+.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
+  width: fit-content !important; 
+}
+
+.panels-3wFtMD .container-YkUktl .avatarWrapper-1B9FTW {
+  width: 194px;
+  margin-right: 0px !important;
+}
+
+.panels-3wFtMD .container-YkUktl .avatarWrapper-1B9FTW:hover {
+  margin-right: 8px !important;
+}
+
+.panels-3wFtMD .container-YkUktl .flex-2S1XBF button[role="switch"] {
+  width: 0px;
+  overflow: hidden;
+  transition: all 0.3s;
+  left: 16px;
+}
+
+.panels-3wFtMD .container-YkUktl .flex-2S1XBF:hover button[role="switch"] {
+  width: 32px;
+  overflow: visible;
+  transition: all 0.3s;
+  left: 0px;
+}
+
+.panels-3wFtMD .container-YkUktl .flex-2S1XBF:not(:hover) button:not([role="switch"]) svg {
+  rotate: 360deg;
+  transition: rotate 0.3s;
+  background-color: var(--background-secondary-alt); /* might look off with some themes */
+}
+
+.panels-3wFtMD .container-YkUktl .flex-2S1XBF:hover button:not([role="switch"]) svg {
+  rotate: 0deg;
+  transition: rotate 0.3s;
+}
 
 /* Don't TOUCH!!!! */
 :root {
