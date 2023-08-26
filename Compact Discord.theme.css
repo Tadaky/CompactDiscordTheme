@@ -26,7 +26,7 @@
 /* Put (/*) ahead @import to disable
 
 /*
-@import url(https://discordstyles.github.io/Fluent/Icons.css);
+@import url('https://discordstyles.github.io/Fluent/Icons.css');
 
 /* Addon Float */
 @import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
