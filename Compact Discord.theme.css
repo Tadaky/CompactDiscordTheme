@@ -53,7 +53,7 @@
 @import url(//dablulite.github.io/css-snippets/AccountDetailsGrid/import.css);
 
 /* MacOS  Titlebar */
-@import url(//dablulite.github.io/css-snippets/MacosTitlebar/import.css);
+/*@import url(//dablulite.github.io/css-snippets/MacosTitlebar/import.css);
 :root {
     --mactitlebar-left-margin: 5px;
     --mactitlebar-top-margin: 10px;
