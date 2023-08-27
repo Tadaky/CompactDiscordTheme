@@ -9,21 +9,20 @@
  * @website https://github.com/Tadaky
 */
 
-/* Addons */
-@import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
-
-/* Warning to Remove Minimum Size */
-@import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/addon/RemoveMinimumSize.css) (width: 940px);
+/* Put (/*) ahead @import to disable
+/* Add Only @Imports */
 
 /* Source */
 @import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/Float.css) (max-width: 940px);
 
+/* AddonMini */
+@import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
+
+/* Remove Minimum Size Warning */
+@import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/addon/RemoveMinimumSize.css) (width: 940px);
+
 /* If your theme has custom settings icons, delete or comment this line */
 @import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/addon/SettingsIcons.css) (max-width: 940px);
-
-
-/* --------------------- Addons --------------------- */
-/* Put (/*) ahead @import to disable
 
 /* Addon Float */
 @import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
@@ -54,6 +53,24 @@
 
 /* Settings Sidebar */
 /*@import url(https://maendisease.github.io/BetterDiscordStuff/css/SettingsSidebar.css);
+
+/* Minimal Auth Apps */
+@import url("https://minidiscordthemes.github.io/Snippets/MinimalAuthApps/MinimalAuthApps.css");
+
+/* Small DM and Channel lists by <@398131626695196672> */
+/*@import url('https://lolpowerluke.github.io/smallDMchannelList/smallDMchannelList.css');
+
+/* ChannelDms Adjustments */
+/*@import url(https://maendisease.github.io/BetterDiscordStuff/css/ChannelDms.css);
+
+/* Add Server Dark Mode */
+@import url(https://neodymium7.github.io/BetterDiscordStuff/CSS/AddServerDarkMode.css);
+
+/* Chat Bubble */
+@import url(https://maendisease.github.io/BetterDiscordStuff/css/ChatBubbles.css);
+
+
+/* Don't Add @Imports */
 
 /* Floating Folder */
 .wrapper-38slSD:active {
@@ -89,9 +106,6 @@
     transform: rotate(90deg);
 }
 
-/* Minimal Auth Apps */
-@import url("https://minidiscordthemes.github.io/Snippets/MinimalAuthApps/MinimalAuthApps.css");
-
 /* removes a bunch of stuff */
 [class^="message-"] div[aria-label*="super" i]:has([class^="icon-"]),
 [class^="reactButtons-"] > div[aria-label*="super" i],
@@ -103,24 +117,29 @@ button[id="super-reaction-picker-tab"],
 [class^="burstGlow-"] {
   display: none;
 }
+
 /* makes super reactions not disappear on hover */
 [class*="hideEmoji-"] {
   opacity: 1;
 }
+
 /* removes stuff from emoji hover popup */
 [class*="burstReactionTooltipSpacer-"] {
   border: none !important;
   padding: 0px;
   margin: 0px;
 }
+
 /* makes background color the same as normal reactions in "show reactions" tab*/
 [class^="reactionSelected-"] {
   background: var(--background-tertiary) !important;
 }
+
 /* disables clicking */
 [class^="reactionInner-"]:is([aria-label*=" super " i]) {
   pointer-events: none;
 }
+
 /* removes shake animation */
 [class*="shakeReaction-"] {
   animation: none !important;
@@ -192,6 +211,98 @@ button[id="super-reaction-picker-tab"],
   rotate: 0deg;
   transition: rotate 0.3s;
 }
+
+/* Rounded User Panel */
+/*.panels-3wFtMD {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  border: 1px solid var(--background-modifier-accent);
+  border-radius: 20px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.45);
+}
+
+.theme-dark .container-YkUktl,
+.container-1zzFcN,
+.theme-dark .panel-2ZFCRb {
+  background-color: transparent !important;
+}
+
+.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
+  margin-left: -10px;
+}
+
+/* Always bottom server list buttons*/
+.scroller-3X7KbA {
+  contain: unset;
+  padding-bottom: 190px;
+}
+.scroller-3X7KbA::before {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    width: 72px;
+    height: 190px;
+    background: linear-gradient(transparent, var(--background-tertiary) 30%);
+    z-index: 1;
+}
+.tutorialContainer-2jwoiB {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+}
+.tutorialContainer-2jwoiB + .listItem-3SmSlK {
+    position: fixed;
+    bottom: 58px;
+    contain: none;
+    z-index: 1;
+}
+
+/* weird connected sidebar */
+.pill-2RsI5Q {
+  width: 100%;
+  overflow: visible !important;
+}
+.pill-2RsI5Q [style="opacity: 1; height: 40px; transform: none;"] {
+  right: 0;
+  height: 48px !important;
+  background-color: var(--background-secondary);
+  width: 60px;
+  border-radius: 30% 0 0 30%;
+  filter: drop-shadow(0px 14px 8px rgba(0,0,0,0.1));
+  pointer-events: none;
+  animation: pillAnimateIn 0.3s backwards cubic-bezier(0, 0, 0, 1.4);
+}
+.pill-2RsI5Q [style="opacity: 1; height: 40px; transform: none;"]::after,
+.pill-2RsI5Q [style="opacity: 1; height: 40px; transform: none;"]::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-bottom-right-radius: 100px;
+  box-shadow: 15px 15px 0 15px var(--background-secondary);
+}
+.pill-2RsI5Q [style="opacity: 1; height: 40px; transform: none;"]::before {
+  top: 100%;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 100px;
+  box-shadow: 15px -15px 0 15px var(--background-secondary);
+}
+@keyframes pillAnimateIn {
+  from {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+}
+
+
+
+
+
+
+
 
 /* Don't TOUCH!!!! */
 :root {
@@ -279,4 +390,25 @@ button[id="super-reaction-picker-tab"],
   --rs-phone-color: var(--rs-online-color); /* Colour of the ring and phone icon when a user is on their phone |  */
 
   --rs-phone-visible: none; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
+}
+
+/* Chat Bubble Root */
+:root {
+    --chat-bubble: 1;
+
+    --chat-bubble-background-color: var(--background-secondary);
+    --chat-bubble-border-color: var(--background-secondary-alt);
+    --chat-bubble-code-background-color: var(--background-secondary-alt);
+
+    --chat-bubble-max-width: 90%;
+    --chat-bubble-border-radius: 8px;
+
+    --chat-bubble-box-shadow-h-offset: 0;
+    --chat-bubble-box-shadow-v-offset: 4px;
+    --chat-bubble-box-shadow-blur: 4px;
+    
+    --chat-bubble-box-shadow-color-h: 0;
+    --chat-bubble-box-shadow-color-s: 0%;
+    --chat-bubble-box-shadow-color-l: 0%;
+    --chat-bubble-box-shadow-color-a: 0.16;
 }
