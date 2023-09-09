@@ -233,7 +233,7 @@ button[id="super-reaction-picker-tab"],
 }
 
 /* Always bottom server list buttons*/
-.scroller-3X7KbA {
+/*.scroller-3X7KbA {
   contain: unset;
   padding-bottom: 190px;
 }
