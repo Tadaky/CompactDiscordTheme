@@ -73,15 +73,26 @@
 @import url("https://dablulite.github.io/css-snippets/SpotifyActivityRedesign/import.css");
 
 /* Better Titlebar w/ macos */
-@import url(//dablulite.github.io/css-snippets/BetterTitlebar/import-trafficlights.css);
+/*@import url(//dablulite.github.io/css-snippets/BetterTitlebar/import-trafficlights.css);
 
 /* DeclutterBar */
 @import url(//dablulite.github.io/css-snippets/DeclutterBar/import-trafficlights.css);
 
 /* Don't Add @Imports */
 
+/* Add danger colours to dangerous user actions */
+#user-context-close-dm, #user-context-remove-friend, #user-context-block { color: var(--status-danger) }
+#user-context-close-dm:active, #user-context-remove-friend:active, #user-context-block:active {
+    background-color: var(--red-500)!important;
+    color: var(--white-500)!important;    
+}
+#user-context-close-dm[class*="focused-"], #user-context-remove-friend[class*="focused-"], #user-context-block[class*="focused-"] {
+    background-color: var(--button-danger-background);
+    color: var(--white-500);   
+}
+
 /* Floating Folder */
-.wrapper-38slSD:active {
+/*.wrapper-38slSD:active {
     -webkit-transform: unset;
     transform: none;
 }
@@ -267,7 +278,7 @@ button[id="super-reaction-picker-tab"],
 }
 
 /* weird connected sidebar */
-.pill-2RsI5Q {
+/*.pill-2RsI5Q {
   width: 100%;
   overflow: visible !important;
 }
