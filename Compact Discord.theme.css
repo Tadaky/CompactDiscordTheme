@@ -69,6 +69,11 @@
 /* Chat Bubble */
 @import url(https://maendisease.github.io/BetterDiscordStuff/css/ChatBubbles.css);
 
+/* Spotify Activity Redesign */
+@import url("https://dablulite.github.io/css-snippets/SpotifyActivityRedesign/import.css");
+
+/* Better Titlebar w/ macos */
+@import url(//dablulite.github.io/css-snippets/BetterTitlebar/import-trafficlights.css);
 
 /* Don't Add @Imports */
 
