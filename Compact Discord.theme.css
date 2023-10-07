@@ -15,6 +15,7 @@
 /* Source */
 @import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/Float.css) (max-width: 940px);
 
+
 /* AddonMini */
 @import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
 
@@ -78,7 +79,23 @@
 /* DeclutterBar */
 /*@import url(//dablulite.github.io/css-snippets/DeclutterBar/import-trafficlights.css);
 
+/* Better Nitro Profile Border */
+@import url("https://dablulite.github.io/css-snippets/BetterNitroProfileBorder/import.css");
+
+
+
+
+
+
+
+
 /* Don't Add @Imports */
+
+/* Remove Shop and Nitro Buttons */
+[class^="channel-"][class*="container-"]:has(a[href="/store"]),
+[class^="channel-"][class*="container-"]:has(a[href="/shop"]) {
+  display: none;
+}
 
 /* Add danger colours to dangerous user actions */
 #user-context-close-dm, #user-context-remove-friend, #user-context-block { color: var(--status-danger) }
