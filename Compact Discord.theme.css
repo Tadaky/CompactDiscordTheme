@@ -1,9 +1,9 @@
 /**
- * @name Compact Discord
+ * @name Compact Frankenstein
  * @version 0.1.69
  * @author Tadaky#0033
  * @authorId 353673189240340482
- * @description Essentials Discord Addons in one. (Frankenstein*)
+ * @description Essentials Discord CSS in one.
  * @source https://github.com/maenDisease/BetterDiscordStuff/tree/main/Themes/Float
  * @invite hfDt9Yf69M
  * @website https://github.com/Tadaky
@@ -14,7 +14,6 @@
 
 /* Source */
 @import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/Float.css) (max-width: 940px);
-
 
 /* AddonMini */
 @import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
@@ -37,17 +36,8 @@
 /* Discolored */
 @import url('https://nyri4.github.io/Discolored/main.css');
 
-/* Icon Pack UI */
-@import url("https://warrayquipsome.github.io/Chillax/Addons/IconPackEdited.css");
-
-/* Avatar Member List */
-@import url("https://warrayquipsome.github.io/Chillax/Addons/AvatarOnlyMemberList.css");
-
-/* Folder Redesign */
-/*@import url("https://warrayquipsome.github.io/Chillax/Addons/FolderRedesign.css");
-
 /* Radial Status */
-/*@import url("https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css");
+@import url("https://discordstyles.github.io/RadialStatus/dist/RadialStatus.css");
 
 /* Account Details Grid */
 @import url(//dablulite.github.io/css-snippets/AccountDetailsGrid/import.css);
@@ -59,7 +49,7 @@
 @import url("https://minidiscordthemes.github.io/Snippets/MinimalAuthApps/MinimalAuthApps.css");
 
 /* Small DM and Channel lists by <@398131626695196672> */
-/*@import url('https://lolpowerluke.github.io/smallDMchannelList/smallDMchannelList.css');
+@import url('https://lolpowerluke.github.io/smallDMchannelList/smallDMchannelList.css');
 
 /* ChannelDms Adjustments */
 /*@import url(https://maendisease.github.io/BetterDiscordStuff/css/ChannelDms.css);
@@ -68,7 +58,7 @@
 @import url(https://neodymium7.github.io/BetterDiscordStuff/CSS/AddServerDarkMode.css);
 
 /* Chat Bubble */
-@import url(https://maendisease.github.io/BetterDiscordStuff/css/ChatBubbles.css);
+/*@import url(https://maendisease.github.io/BetterDiscordStuff/css/ChatBubbles.css);
 
 /* Spotify Activity Redesign */
 @import url("https://dablulite.github.io/css-snippets/SpotifyActivityRedesign/import.css");
@@ -80,7 +70,7 @@
 /*@import url(//dablulite.github.io/css-snippets/DeclutterBar/import-trafficlights.css);
 
 /* Better Nitro Profile Border */
-@import url("https://dablulite.github.io/css-snippets/BetterNitroProfileBorder/import.css");
+/*@import url("https://dablulite.github.io/css-snippets/BetterNitroProfileBorder/import.css");
 
 
 
@@ -90,6 +80,11 @@
 
 
 /* Don't Add @Imports */
+
+/* Server list and members position by <@437579806616322049> */
+.content-1jQy2l:not(:has(.mainTableContainer-1olPmq)) {
+    flex-direction: row-reverse;
+}
 
 /* Remove Shop and Nitro Buttons */
 [class^="channel-"][class*="container-"]:has(a[href="/store"]),
