@@ -1,2 +1,2 @@
 # CompactDiscordTheme
-Several combinations of themes that I consider useful in one.
+Several combinations of CSS that I consider useful for me in one.
