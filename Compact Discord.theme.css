@@ -75,6 +75,8 @@
 /* Stacked Channel */
 @import url("https://blade04208.github.io/css/stacked/channel.css");
 
+/* Remove the header and place the window buttons inside the top bar */
+@import url("https://raw.githubusercontent.com/coolesding/shiggycord/v3/files/winbar.css");
 
 
 
@@ -92,6 +94,31 @@
 
 /* Don't Add @Imports */
 
+/* Hide the chat bar buttons */
+.chatContent-3KubbW {
+    container-type: inline-size;
+    container-name: chat;
+}
+
+@container chat (max-width: 500px) {
+    .chatContent-3KubbW .buttons-uaqb-5 {
+        display: none;
+    } 
+}
+
+/* No profile effects */
+[class*="profileEffects"] {
+  display:none;
+}
+
+/* Removes Unnecessary Things From The User Panel */
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > div:nth-child(1),
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > div:nth-child(2),
+[class*=accountProfilePopoutWrapper-] > div > div > [class*=userPopoutOverlayBackground-] > div:nth-child(3),
+[class*=accountProfilePopoutWrapper-] div[role=separator]
+{
+  display: none;
+}
 
 /* Stacked Server Settings */
 :root {
@@ -264,6 +291,64 @@ button[id="super-reaction-picker-tab"],
     --chat-bubble-box-shadow-color-s: 0%;
     --chat-bubble-box-shadow-color-l: 0%;
     --chat-bubble-box-shadow-color-a: 0.16;
+}
+
+/* Expandable User Panel */
+.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
+  width: fit-content !important; 
+}
+.panels-3wFtMD .container-YkUktl .avatarWrapper-1B9FTW {
+  width: 194px;
+  margin-right: 0px !important;
+}
+.panels-3wFtMD .container-YkUktl .avatarWrapper-1B9FTW:hover {
+  margin-right: 8px !important;
+}
+.panels-3wFtMD .container-YkUktl .flex-2S1XBF button[role="switch"] {
+  width: 0px;
+  overflow: hidden;
+  transition: all 0.3s;
+  left: 16px;
+}
+.panels-3wFtMD .container-YkUktl .flex-2S1XBF:hover button[role="switch"] {
+  width: 32px;
+  overflow: visible;
+  transition: all 0.3s;
+  left: 0px;
+}
+.panels-3wFtMD .container-YkUktl .flex-2S1XBF:not(:hover) button:not([role="switch"]) svg {
+  rotate: 360deg;
+  transition: rotate 0.3s;
+  background-color: var(--background-secondary-alt); /* might look off with some themes */
+}
+.panels-3wFtMD .container-YkUktl .flex-2S1XBF:hover button:not([role="switch"]) svg {
+  rotate: 0deg;
+  transition: rotate 0.3s;
+}
+
+/* Free Nitro?! */
+[class*="bogoTrialBadge-"] {
+    font-size: 0;
+    line-height: 0;
+}
+[class*="bogoTrialBadge-"]::after {
+    content: "FREE Nitro";
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 12px;
+    margin-left: auto;
+    pointer-events: all;
+    text-transform: uppercase;
+    background-image: -webkit-gradient(linear,left top,right top,from(var(--premium-tier-2-purple-for-gradients)),to(var(--premium-tier-2-pink-for-gradients)));
+    background-image: linear-gradient(90deg,var(--premium-tier-2-purple-for-gradients),var(--premium-tier-2-pink-for-gradients));
+    color: var(--white-500);
 }
 
 
