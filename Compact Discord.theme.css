@@ -22,13 +22,13 @@
 @import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/addon/RemoveMinimumSize.css) (width: 940px);
 
 /* If your theme has custom settings icons, delete or comment this line */
-/*@import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/addon/SettingsIcons.css) (max-width: 940px);
+@import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/addon/SettingsIcons.css) (max-width: 940px);
 
 /* Addon Float */
 @import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
  
 /* Settings Icons */
-@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
+/*@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
 
 /* Emoji Microsoft */
 @import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Microsoft.css");
@@ -67,7 +67,7 @@
 @import url("https://dablulite.github.io/css-snippets/SpotifyActivityRedesign/import.css");
 
 /* Better Nitro Profile Border */
-@import url("https://dablulite.github.io/css-snippets/BetterNitroProfileBorder/import.css");
+/*@import url("https://dablulite.github.io/css-snippets/BetterNitroProfileBorder/import.css");
 
 /* Stacked Server */
 @import url("https://blade04208.github.io/css/stacked/server.css");
@@ -193,36 +193,30 @@ button[id="super-reaction-picker-tab"],
 .panels-3wFtMD .container-YkUktl .flex-2S1XBF {
   width: fit-content !important; 
 }
-
 .panels-3wFtMD .container-YkUktl .avatarWrapper-1B9FTW {
   width: 194px;
   margin-right: 0px !important;
 }
-
 .panels-3wFtMD .container-YkUktl .avatarWrapper-1B9FTW:hover {
   margin-right: 8px !important;
 }
-
 .panels-3wFtMD .container-YkUktl .flex-2S1XBF button[role="switch"] {
   width: 0px;
   overflow: hidden;
   transition: all 0.3s;
   left: 16px;
 }
-
 .panels-3wFtMD .container-YkUktl .flex-2S1XBF:hover button[role="switch"] {
   width: 32px;
   overflow: visible;
   transition: all 0.3s;
   left: 0px;
 }
-
 .panels-3wFtMD .container-YkUktl .flex-2S1XBF:not(:hover) button:not([role="switch"]) svg {
   rotate: 360deg;
   transition: rotate 0.3s;
   background-color: var(--background-secondary-alt); /* might look off with some themes */
 }
-
 .panels-3wFtMD .container-YkUktl .flex-2S1XBF:hover button:not([role="switch"]) svg {
   rotate: 0deg;
   transition: rotate 0.3s;
