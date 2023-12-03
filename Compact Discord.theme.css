@@ -28,7 +28,7 @@
 @import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
  
 /* Settings Icons */
-@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
+/*@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
 
 /* Emoji Microsoft */
 @import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Microsoft.css");
@@ -74,6 +74,25 @@
 
 /* Stacked Channel */
 @import url("https://blade04208.github.io/css/stacked/channel.css");
+
+/* Settings Icons */
+@import url("https://minidiscordthemes.github.io/SettingsIcons/SettingsIcons.theme.css");
+
+/* Immersive Mode */
+@import url("https://dablulite.github.io/css-snippets/ImmersiveMode/import.css");
+
+/* Message Section */
+@import url(https://seele1306.github.io/Snippets/MessageSection/import.css);
+
+
+
+
+
+
+
+
+
+
 
 
 
