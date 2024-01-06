@@ -13,7 +13,7 @@
 /* Add Only @Imports */
 
 /* Source */
-@import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/Float.css) (max-width: 940px);
+/*@import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/Float.css) (max-width: 940px);
 
 /* AddonMini */
 @import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
@@ -64,7 +64,7 @@
 @import url("https://blade04208.github.io/css/stacked/server.css");
 
 /* Stacked Channel */
-/*@import url("https://blade04208.github.io/css/stacked/channel.css");
+@import url("https://blade04208.github.io/css/stacked/channel.css");
 
 /* Settings Icons */
 @import url("https://minidiscordthemes.github.io/SettingsIcons/SettingsIcons.theme.css");
