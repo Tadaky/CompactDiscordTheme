@@ -79,6 +79,14 @@
 /* userpfp */
 /*@import url(https://userpfp.github.io/UserPFP/import.css);
 
+/* Spotifly player */
+@import url(https://raw.githubusercontent.com/Panniku/vc-snippets/main/BetterSpotifyPlayer.css);
+
+/* MinimalAuthApps */
+@import url("https://minidiscordthemes.github.io/Snippets/MinimalAuthApps/main.css");
+
+/* transparent-popups */
+@import url('https://s-k-y-l-i.github.io/discord-themes/Theme%20code/transparent-popups.css');
 
 
 
@@ -102,6 +110,47 @@
 
 
 /* Don't Add @Imports Here */
+
+/* transparent-popups Config */
+:root{
+    --blur-popup: 40px; /*Popup blur size*/
+    --opacity-popup: 0.6; /*Popup background opacity*/  
+    --radius-popup: 40px; /*Popup border radius*/
+    --radius-context: 20px; /*Context menu popups radius*/
+    /*--pop-up-color: black; /*uncomment for custom Popup color*/ 
+    /*--context-menu-border: 1px solid red; /*uncomment for custom border*/
+}
+
+/* Spotifly player */
+#vc-spotify-player {
+    --blur-amount: 2px; /* higher px = stronger blur, 0 = no blur */
+    --darken-percent: 0.8; /* 0 = album cover is not darkened, 1 = album cover is darkened fully (black) */
+}
+
+#vc-spotify-player {
+    background: transparent !important;
+    position: relative;
+}
+
+#vc-spotify-player > * {
+    position: relative;
+    z-index: 1;
+}
+
+#vc-spotify-player::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, var(--darken-percent)),
+            rgba(0, 0, 0, var(--darken-percent))), var(--vc-spotify-track-image);
+    background-size: cover;
+    filter: blur(var(--blur-amount));
+    clip-path: inset(0);
+}
 
 /* Hide New Messages Bar Until Hovered*/
 .messagesWrapper_ea2b0b {
