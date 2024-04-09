@@ -65,7 +65,7 @@
 /*@import url("https://blade04208.github.io/css/stacked/server.css");
 
 /* Stacked Channel */
-@import url("https://blade04208.github.io/css/stacked/channel.css");
+/*@import url("https://blade04208.github.io/css/stacked/channel.css");
 
 /* Settings Icons */
 /*@import url("https://minidiscordthemes.github.io/SettingsIcons/SettingsIcons.theme.css");
@@ -110,6 +110,24 @@
 
 
 /* Don't Add @Imports Here */
+
+/* Stacked Channel */
+:root {
+    --channel-list-width: 0px;
+}
+
+:root:has([aria-label="Thread Actions"], [aria-label="Channel Actions"]) {
+    --channel-list-width: 240px !important;
+}
+
+:root:has(div[class^=sidebar]:hover, [aria-label="Servers sidebar"]:hover) {
+    --channel-list-width: 240px !important;
+}
+
+div[class^=base] > div[class^=content__] > div[class^=sidebar] {
+    width: var(--channel-list-width);
+    transition: width 0.35s ease;
+}
 
 /* transparent-popups Config */
 :root{
