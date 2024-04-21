@@ -137,21 +137,6 @@
     color: var(--interactive-active);
 }
 
-/* A bit more float-ey */
-@import url("https://ukrioo.github.io/cssCord/Other/TabCord.css");
-.appMount_c99875, .app_de4237, .bg__12180 {background: transparent;}
-/* Change these values */
-#app-mount {
-    transform: scale(0.98);
-    text-rendering: optimizeLegibility;
-    opacity: 0.97;
-    border-radius: 0px;
-}
-body {
-    background-image: url("");
-    background-size: cover;
-}
-
 /* Tabs on Top */
 :root {
     --dm-columns: 4;
