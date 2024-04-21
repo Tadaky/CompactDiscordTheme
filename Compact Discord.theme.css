@@ -65,7 +65,7 @@
 /*@import url("https://blade04208.github.io/css/stacked/server.css");
 
 /* Stacked Channel */
-/*@import url("https://blade04208.github.io/css/stacked/channel.css");
+@import url("https://blade04208.github.io/css/stacked/channel.css");
 
 /* Settings Icons */
 /*@import url("https://minidiscordthemes.github.io/SettingsIcons/SettingsIcons.theme.css");
@@ -111,22 +111,94 @@
 
 /* Don't Add @Imports Here */
 
-/* Stacked Channel */
+/* Search as a button  */
+.search_ac353c:not(.open_d3ab4e) > .searchBar__5a20a {
+    width: 22px;
+    background: transparent;
+}
+
+.searchBarComponent__8f95f{
+    background: transparent;
+}
+
+.search_ac353c:not(.open_d3ab4e) .iconLayout__9d9a4 {
+    cursor: pointer;
+}
+
+.search_ac353c:not(.open_d3ab4e) .iconContainer__9f124 {
+    transform: scale(1.4);
+}
+
+.search_ac353c:not(.open_d3ab4e) .icon__5c8c7 {
+    color: var(--interactive-normal);
+}
+
+.search_ac353c:not(.open_d3ab4e):hover .icon__5c8c7 {
+    color: var(--interactive-active);
+}
+
+/* A bit more float-ey */
+@import url("https://ukrioo.github.io/cssCord/Other/TabCord.css");
+.appMount_c99875, .app_de4237, .bg__12180 {background: transparent;}
+/* Change these values */
+#app-mount {
+    transform: scale(0.98);
+    text-rendering: optimizeLegibility;
+    opacity: 0.97;
+    border-radius: 0px;
+}
+body {
+    background-image: url("");
+    background-size: cover;
+}
+
+/* Tabs on Top */
 :root {
-    --channel-list-width: 0px;
+    --dm-columns: 4;
 }
 
-:root:has([aria-label="Thread Actions"], [aria-label="Channel Actions"]) {
-    --channel-list-width: 240px !important;
+[class^=privateChannels_] [class^=content_] {
+    display: grid;
+    height: unset !important;
+    grid-template-columns: repeat(var(--dm-columns), 1fr);
+
+    &> * {
+        overflow: hidden;
+        grid-column: 1 / calc(var(--dm-columns) + 1);
+    }
 }
 
-:root:has(div[class^=sidebar]:hover, [aria-label="Servers sidebar"]:hover) {
-    --channel-list-width: 240px !important;
-}
+[class^=channel_]:has(
+    [href="/channels/@me"],
+    [href="/library"],
+    [href="/shop"],
+    [href="/store"],
+    [href="/family-center"],
+    [href="/message-requests"]
+) {
+    grid-column: auto;
 
-div[class^=base] > div[class^=content__] > div[class^=sidebar] {
-    width: var(--channel-list-width);
-    transition: width 0.35s ease;
+    [class*="linkButton"] {
+        padding-right: 0;
+    }
+ 
+    [class*="link_"] {
+        justify-content: center;
+        gap: 0;
+    }
+
+    [class*="avatar_"] {
+        margin: 0;
+        width: unset;
+    }
+
+    [class*="avatarWithText_"] {
+        flex-grow: unset;
+    }
+    
+    [class*="content_"] {
+        display: none;
+    }
 }
 
 /* transparent-popups Config */
