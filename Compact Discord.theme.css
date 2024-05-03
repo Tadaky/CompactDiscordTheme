@@ -1,7 +1,7 @@
 /*
- * @name Frankenstein CSS
- * @version 0.5.8a
- * @author Tadaky#0033
+ * @name Tadaky's Pessoal Theme
+ * @version 0.6.1
+ * @author Tadaky#0000
  * @authorId 353673189240340482
  * @description Essentials Discord CSS.
  * @source https://github.com/Tadaky/CompactDiscordTheme/blob/main/Compact%20Discord.theme.css
@@ -9,25 +9,8 @@
  * @website https://github.com/Tadaky
 */
 
-/* Put (/*) ahead @import to disable
+/* Put (/*) ahead to disable
 
-/* Add Only @Imports Here
-
-/* Float */
-/*@import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/Float.css) (max-width: 940px);
-
-/* AddonMini */
-@import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
-
-/* Remove Minimum Size Warning */
-@import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/addon/RemoveMinimumSize.css) (width: 940px);
-
-/* If your theme has custom settings icons, delete or comment this line */
-/*@import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/addon/SettingsIcons.css) (max-width: 940px);
-
-/* Addon Float */
-@import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
- 
 /* Settings Icons */
 @import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
 
@@ -37,132 +20,72 @@
 /* Discolored */
 @import url('https://nyri4.github.io/Discolored/main.css');
 
-/* Icon Pack Edited */
-@import url("https://warrayquipsome.github.io/Chillax/Addons/IconPackEdited.css");
-
 /* Avatar Only Member List */
 @import url("https://warrayquipsome.github.io/Chillax/Addons/AvatarOnlyMemberList.css");
 
 /* Account Details Grid */
 @import url(//dablulite.github.io/css-snippets/AccountDetailsGrid/import.css);
 
-/* Minimal Auth Apps */
-@import url("https://minidiscordthemes.github.io/Snippets/MinimalAuthApps/MinimalAuthApps.css");
-
 /* Add Server Dark Mode */
 @import url(https://neodymium7.github.io/BetterDiscordStuff/CSS/AddServerDarkMode.css);
-
-/* Chat Bubble */
-/*@import url(https://maendisease.github.io/BetterDiscordStuff/css/ChatBubbles.css);
-
-/* Spotify Activity Redesign */
-@import url("https://dablulite.github.io/css-snippets/SpotifyActivityRedesign/import.css");
-
-/* Better Nitro Profile Border */
-/*@import url("https://dablulite.github.io/css-snippets/BetterNitroProfileBorder/import.css");
-
-/* Stacked Server */
-/*@import url("https://blade04208.github.io/css/stacked/server.css");
-
-/* Stacked Channel */
-@import url("https://blade04208.github.io/css/stacked/channel.css");
-
-/* Settings Icons */
-/*@import url("https://minidiscordthemes.github.io/SettingsIcons/SettingsIcons.theme.css");
-
-/* Immersive Mode */
-/*@import url("https://dablulite.github.io/css-snippets/ImmersiveMode/import.css");
 
 /* Message Section */
 @import url(https://seele1306.github.io/Snippets/MessageSection/import.css);
 
-/* userpfp */
-/*@import url(https://userpfp.github.io/UserPFP/import.css);
-
 /* Spotifly player */
 @import url(https://raw.githubusercontent.com/Panniku/vc-snippets/main/BetterSpotifyPlayer.css);
 
+/* Spotifly background */
+#vc-spotify-player {
+    --blur-amount: 2px; /* higher px = stronger blur, 0 = no blur */
+    --darken-percent: 0.8; /* 0 = album cover is not darkened, 1 = album cover is darkened fully (black) */
+}
+
+#vc-spotify-player {
+    background: transparent !important;
+    position: relative;
+}
+
+#vc-spotify-player > * {
+    position: relative;
+    z-index: 1;
+}
+
+#vc-spotify-player::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, var(--darken-percent)),
+            rgba(0, 0, 0, var(--darken-percent))), var(--vc-spotify-track-image);
+    background-size: cover;
+    filter: blur(var(--blur-amount));
+    clip-path: inset(0);
+}
+
 /* MinimalAuthApps */
 @import url("https://minidiscordthemes.github.io/Snippets/MinimalAuthApps/main.css");
-
-/* transparent-popups */
-@import url('https://s-k-y-l-i.github.io/discord-themes/Theme%20code/transparent-popups.css');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Don't Add @Imports Here */
-
-/* hide server bar */
-[class*=" guilds__"] {
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) 0.1s, 
-                opacity   0.25s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
-    position: absolute;
-    inset: 0;
-    z-index: 256;
-    background-color: #02020283;
-    backdrop-filter: blur(12px);
-    padding-inline: 4px;
-    /* sidebar background */
-    /* set up to give a "frosted glass" effect */
-    background-color: transparent;
-    backdrop-filter: blur(16px) saturate(120%);
-
-    /* exponential ease-out on position and opacity */
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) 0.1s, 
-                opacity   0.25s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
-}
-
-[class*=" guilds__"]:not(:hover) {
-    --offscreen: -80px; /* amount needed to fully remove sidebar from view */
-    --hover-margin: 50px; /* margin on the side of screen that pops out sidebar */
-    
-    transform: translateX(
-        calc(var(--offscreen) + var(--hover-margin))
-    );
-    opacity: 0; /* comment this out to preview the margin */
-}
 
 /* Search as a button  */
 .search_ac353c:not(.open_d3ab4e) > .searchBar__5a20a {
     width: 22px;
     background: transparent;
 }
-
 .searchBarComponent__8f95f{
     background: transparent;
 }
-
 .search_ac353c:not(.open_d3ab4e) .iconLayout__9d9a4 {
     cursor: pointer;
 }
-
 .search_ac353c:not(.open_d3ab4e) .iconContainer__9f124 {
     transform: scale(1.4);
 }
-
 .search_ac353c:not(.open_d3ab4e) .icon__5c8c7 {
     color: var(--interactive-normal);
 }
-
 .search_ac353c:not(.open_d3ab4e):hover .icon__5c8c7 {
     color: var(--interactive-active);
 }
@@ -171,7 +94,6 @@
 :root {
     --dm-columns: 4;
 }
-
 [class^=privateChannels_] [class^=content_] {
     display: grid;
     height: unset !important;
@@ -182,7 +104,6 @@
         grid-column: 1 / calc(var(--dm-columns) + 1);
     }
 }
-
 [class^=channel_]:has(
     [href="/channels/@me"],
     [href="/library"],
@@ -216,7 +137,8 @@
     }
 }
 
-/* transparent-popups Config */
+/* transparent-popups and Configs */
+@import url('https://s-k-y-l-i.github.io/discord-themes/Theme%20code/transparent-popups.css');
 :root{
     --blur-popup: 40px; /*Popup blur size*/
     --opacity-popup: 0.6; /*Popup background opacity*/  
@@ -224,37 +146,6 @@
     --radius-context: 20px; /*Context menu popups radius*/
     /*--pop-up-color: black; /*uncomment for custom Popup color*/ 
     /*--context-menu-border: 1px solid red; /*uncomment for custom border*/
-}
-
-/* Spotifly player */
-#vc-spotify-player {
-    --blur-amount: 2px; /* higher px = stronger blur, 0 = no blur */
-    --darken-percent: 0.8; /* 0 = album cover is not darkened, 1 = album cover is darkened fully (black) */
-}
-
-#vc-spotify-player {
-    background: transparent !important;
-    position: relative;
-}
-
-#vc-spotify-player > * {
-    position: relative;
-    z-index: 1;
-}
-
-#vc-spotify-player::after {
-    content: "";
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(rgba(0, 0, 0, var(--darken-percent)),
-            rgba(0, 0, 0, var(--darken-percent))), var(--vc-spotify-track-image);
-    background-size: cover;
-    filter: blur(var(--blur-amount));
-    clip-path: inset(0);
 }
 
 /* Hide New Messages Bar Until Hovered*/
@@ -316,11 +207,9 @@
   transition: translate ease-in-out 0.3s;
   translate: calc(100% - 8px);
 }
-
 [class^=channelTextArea_] [class^=buttons_]:hover {
   translate: 0;
 }
-
 [class^=channelTextArea_] [class^=buttons_]::before,
 [class^=channelTextArea_] [class^=buttons_]::after {
     content: "≡";
@@ -333,50 +222,12 @@
     height:100%;
     transition: opacity 0.3s 0.3s linear;
 }
-
 [class^=channelTextArea_] [class^=buttons_]::before{
     color:transparent;
 }
-
 [class^=channelTextArea_] [class^=buttons_]:hover::after {
     content:"";
     opacity: 0;
-}
-
-/* Hide Gift Button */
-button:has([d="M4 6a4 4 0 0 1 4-4h.09c1.8 0 3.39 1.18 3.91 2.9A4.09 4.09 0 0 1 15.91 2H16a4 4 0 0 1 3.46 6H20a2 2 0 0 1 2 2v1.5a.5.5 0 0 1-.5.5h-19a.5.5 0 0 1-.5-.5V10c0-1.1.9-2 2-2h.54A3.98 3.98 0 0 1 4 6Zm12 2a2 2 0 1 0 0-4h-.09c-.96 0-1.8.65-2.02 1.58L13.29 8H16Zm-5.89-2.42.6 2.42H8a2 2 0 1 1 0-4h.09c.96 0 1.8.65 2.02 1.58Z"]) {
-  display: none;
-}
-
-/* No profile effects */
-[class*="profileEffects"] {
-  display:none;
-}
-
-/* Removes Unnecessary Things From The User Panel */
-.accountProfilePopoutWrapper-3GskID {
-left: 0
-}
-.accountProfilePopoutWrapper-3GskID [class*=userPopout] {
-margin: 0;
-width: fit-content
-}
-.accountProfilePopoutWrapper-3GskID .section-28YDOf,
-.userPopoutInner-nv9Y92:has(#account) > *:not(:has(#account)),
-.userPopoutOverlayBackground-3A0Pcz:has(#account) > *:not(#account) {
-display: none;
-}
-
-/* Stacked Server Settings */
-:root {
-    --guild-mini: 24px;
-    --guild-max: 72px; /* normal server list size */ 
-}
-
-/* Stacked Channel Settings */
-:root {
-    --channel-mini: 36px;
-    --channel-max: 240px; /* normal channel list size */
 }
 
 /* Add danger colours to dangerous user actions */
@@ -388,230 +239,4 @@ display: none;
 #user-context-close-dm[class*="focused-"], #user-context-remove-friend[class*="focused-"], #user-context-block[class*="focused-"] {
     background-color: var(--button-danger-background);
     color: var(--white-500);   
-}
-
-/* Floating Folder */
-/*.wrapper-38slSD:active {
-    -webkit-transform: unset;
-    transform: none;
-}
-
-[id^="folder-items-"] {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    z-index: 99;
-    overflow-y: auto;
-    max-height: calc(100vh - 72px);
-    margin: auto auto auto calc(72px + 8px);
-    padding-top: 8px;
-    border-radius: 8px;
-    background: var(--background-floating);
-    -webkit-box-shadow: var(--elevation-high);
-    box-shadow: var(--elevation-high);
-}
-
-[id^="folder-items-"]::-webkit-scrollbar {
-    display: none;
-}
-
-.folderIconWrapper-1oRIZr {
-    transform: rotate(-90deg);
-}
-
-.closedFolderIconWrapper-3tRb2d .icon-1zKOXL,
-.expandedFolderIconWrapper-3RwQpD svg {
-    transform: rotate(90deg);
-}
-
-/* removes a bunch of stuff */
-[class^="message-"] div[aria-label*="super" i]:has([class^="icon-"]),
-[class^="reactButtons-"] > div[aria-label*="super" i],
-[class^="reactionInner-"] [class^="effectsWrapper-"],
-[class^="burstReactionTooltipPrompt-"],
-[class^="burstEmojiSection-"],
-[class*="colorPremiumGradient-"],
-button[id="super-reaction-picker-tab"],
-[class^="burstGlow-"] {
-  display: none;
-}
-
-/* makes super reactions not disappear on hover */
-[class*="hideEmoji-"] {
-  opacity: 1;
-}
-
-/* removes stuff from emoji hover popup */
-[class*="burstReactionTooltipSpacer-"] {
-  border: none !important;
-  padding: 0px;
-  margin: 0px;
-}
-
-/* makes background color the same as normal reactions in "show reactions" tab*/
-[class^="reactionSelected-"] {
-  background: var(--background-tertiary) !important;
-}
-
-/* disables clicking */
-[class^="reactionInner-"]:is([aria-label*=" super " i]) {
-  pointer-events: none;
-}
-
-/* removes shake animation */
-[class*="shakeReaction-"] {
-  animation: none !important;
-}
-
-/* expandable user panel */
-.panels-3wFtMD .container-YkUktl .flex-2S1XBF {
-  width: fit-content !important; 
-}
-.panels-3wFtMD .container-YkUktl .avatarWrapper-1B9FTW {
-  width: 194px;
-  margin-right: 0px !important;
-}
-.panels-3wFtMD .container-YkUktl .avatarWrapper-1B9FTW:hover {
-  margin-right: 8px !important;
-}
-.panels-3wFtMD .container-YkUktl .flex-2S1XBF button[role="switch"] {
-  width: 0px;
-  overflow: hidden;
-  transition: all 0.3s;
-  left: 16px;
-}
-.panels-3wFtMD .container-YkUktl .flex-2S1XBF:hover button[role="switch"] {
-  width: 32px;
-  overflow: visible;
-  transition: all 0.3s;
-  left: 0px;
-}
-.panels-3wFtMD .container-YkUktl .flex-2S1XBF:not(:hover) button:not([role="switch"]) svg {
-  rotate: 360deg;
-  transition: rotate 0.3s;
-  background-color: var(--background-secondary-alt); /* might look off with some themes */
-}
-.panels-3wFtMD .container-YkUktl .flex-2S1XBF:hover button:not([role="switch"]) svg {
-  rotate: 0deg;
-  transition: rotate 0.3s;
-}
-
-/* Radial Status Settings */
-:root {
-  --rs-small-spacing: 2px; /* Gap between avatar and status for members list/dms | MUST end in px */
-  --rs-medium-spacing: 3px; /* Gap between avatar and status for User popout | MUST end in px */
-  --rs-large-spacing: 4px; /* Gap between avatar and status for User profiles | MUST end in px */
-
-  --rs-small-width: 2px; /* Thickness of status border for members list/dms | MUST end in px */
-  --rs-medium-width: 3px; /* Thickness of status border for User popout | MUST end in px */
-  --rs-large-width: 4px; /* Thickness of status border for User profile | MUST end in px */
-
-  --rs-avatar-shape: 50%; /* 50% for round - 0% for square */
-
-  --rs-online-color: #5edaa2; /* Colour for online status */
-  --rs-idle-color: #f3ba57; /* Colour for idle status */
-  --rs-dnd-color: #f16464; /* Colour for dnd status */
-  --rs-offline-color: #c4c4c4; /* Colour for offline status */
-  --rs-streaming-color: #8155ce; /* Colour for streaming status */
-  --rs-invisible-color: #c6ccd3; /* Colour for invisible status - Note: this will only show for your own invisibility */
-  --rs-phone-color: var(--rs-online-color); /* Colour of the ring and phone icon when a user is on their phone |  */
-
-  --rs-phone-visible: none; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
-}
-
-/* Chat Bubble Root */
-:root {
-    --chat-bubble: 0.69;
-
-    --chat-bubble-background-color: #fcfcfc1c;
-    --chat-bubble-border-color: #ffffff;
-    --chat-bubble-code-background-color: var(--background-secondary-alt);
-
-    --chat-bubble-max-width: 70%;
-    --chat-bubble-border-radius: 20px;
-
-    --chat-bubble-box-shadow-h-offset: 0px;
-    --chat-bubble-box-shadow-v-offset: 4px;
-    --chat-bubble-box-shadow-blur: 8px;
-    
-    --chat-bubble-box-shadow-color-h: 0;
-    --chat-bubble-box-shadow-color-s: 0%;
-    --chat-bubble-box-shadow-color-l: 0%;
-    --chat-bubble-box-shadow-color-a: 0.16;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Don't TOUCH!!!! */
-:root {
-    /* Guildlist */
-    --guildicon-size: 48;
-    --enable-if-using-favorites-experiment: 0; /* boolean */
-    --guildlist-collapse: 0;
-
-    /* Channel sidebar */
-    --slide-window-on-hover: 1; /* boolean */
-    --float-sidebar-width: 48;
-    --sidebar-hover-width: 240px;
-    --sidebar-hover-delay: 0.2s;
-    --sidebar-transition-duration: 0.4s;
-    --sidebar-window-gap: 8px;
-    --sidebar-border-radius: 8px;
-    --sidebar-usersettings-width: 66px;
-
-    /* Memberlist */
-    --float-members-width: 65px;
-    --members-hover-width: 240px;
-    --members-hover-delay: 1.5s;
-    --members-transition-duration: 0.4s;
-
-    /* Channelheader */
-    --topic-opacity: 1;
-    --toolbar-visibility: flex; /* [flex][none] */
-
-    /* Textarea buttons */ /* [flex][none] */
-    --textarea-buttons-gif: flex;
-    --textarea-buttons-sticker: flex;
-    --textarea-buttons-gift: none;
-
-    /* Theme compatibility */
-    /* --float-guildlist-width-correction: 0px; */
-}
-
-/* The variables are used when the window is at the set sizes, each media query can be edited/deleted */
-@media (max-width:700px) {
-    :root {
-        --topic-opacity: 0;
-        --toolbar-visibility: none;
-        --textarea-buttons-gif: none;
-        --textarea-buttons-sticker: none;
-    }
-}
-
-@media (max-width:500px) {
-    :root {
-        --guildicon-size: 40;
-        --float-members-width: 0;
-    }
-}
-
-@media (max-width:400px) {
-    :root {
-        --float-sidebar-width: 0;
-    }
-}
-
-@media (max-width:300px) {
-    :root {
-        --guildlist-collapse: 1;
-    }
 }
