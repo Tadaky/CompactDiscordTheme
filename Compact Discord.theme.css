@@ -111,6 +111,36 @@
 
 /* Don't Add @Imports Here */
 
+/* hide server bar */
+[class*=" guilds__"] {
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) 0.1s, 
+                opacity   0.25s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+    position: absolute;
+    inset: 0;
+    z-index: 256;
+    background-color: #02020283;
+    backdrop-filter: blur(12px);
+    padding-inline: 4px;
+    /* sidebar background */
+    /* set up to give a "frosted glass" effect */
+    background-color: transparent;
+    backdrop-filter: blur(16px) saturate(120%);
+
+    /* exponential ease-out on position and opacity */
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) 0.1s, 
+                opacity   0.25s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+}
+
+[class*=" guilds__"]:not(:hover) {
+    --offscreen: -80px; /* amount needed to fully remove sidebar from view */
+    --hover-margin: 50px; /* margin on the side of screen that pops out sidebar */
+    
+    transform: translateX(
+        calc(var(--offscreen) + var(--hover-margin))
+    );
+    opacity: 0; /* comment this out to preview the margin */
+}
+
 /* Search as a button  */
 .search_ac353c:not(.open_d3ab4e) > .searchBar__5a20a {
     width: 22px;
