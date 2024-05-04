@@ -1,7 +1,7 @@
 /*
- * @name Frankenstein CSS
- * @version 0.6.5a
- * @author Tadaky#0033
+ * @name Tadaky's Pessoal
+ * @version 0.6.9b
+ * @author Tadaky#0000
  * @authorId 353673189240340482
  * @description Essentials Discord CSS.
  * @source https://github.com/Tadaky/CompactDiscordTheme/blob/main/Compact%20Discord.theme.css
@@ -9,43 +9,47 @@
  * @website https://github.com/Tadaky
 */
 
-/* Put (/*) ahead @import to disable
-/* Add Only @Imports Here
+/* Put (/*) ahead to disable
 
-/* AddonMini */
-@import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
-/* Remove Minimum Size Warning */
-@import url(https://maendisease.github.io/BetterDiscordStuff/Themes/Float/addon/RemoveMinimumSize.css) (width: 940px);
-/* Addon Float */
-@import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
 /* Settings Icons */
-@import url('https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css');
-/* Emoji Microsoft */
-@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Microsoft.css");
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css");
+
 /* Discolored */
-@import url('https://nyri4.github.io/Discolored/main.css');
+@import url("https://nyri4.github.io/Discolored/main.css");
+
 /* Icon Pack Edited */
 @import url("https://warrayquipsome.github.io/Chillax/Addons/IconPackEdited.css");
+
 /* Avatar Only Member List */
 @import url("https://warrayquipsome.github.io/Chillax/Addons/AvatarOnlyMemberList.css");
+
 /* Account Details Grid */
-@import url(//dablulite.github.io/css-snippets/AccountDetailsGrid/import.css);
+@import url("https//dablulite.github.io/css-snippets/AccountDetailsGrid/import.css");
+
 /* Add Server Dark Mode */
-@import url(https://neodymium7.github.io/BetterDiscordStuff/CSS/AddServerDarkMode.css);
-/* Spotify Activity Redesign */
-@import url("https://dablulite.github.io/css-snippets/SpotifyActivityRedesign/import.css");
+@import url("https://neodymium7.github.io/BetterDiscordStuff/CSS/AddServerDarkMode.css");
+
 /* Message Section */
-@import url(https://seele1306.github.io/Snippets/MessageSection/import.css);
+@import url("https://seele1306.github.io/Snippets/MessageSection/import.css");
+
 /* Spotifly player */
-@import url(https://raw.githubusercontent.com/Panniku/vc-snippets/main/BetterSpotifyPlayer.css);
+@import url("https://raw.githubusercontent.com/Panniku/vc-snippets/main/BetterSpotifyPlayer.css");
+
 /* MinimalAuthApps */
 @import url("https://minidiscordthemes.github.io/Snippets/MinimalAuthApps/main.css");
+
 /* transparent-popups */
-@import url('https://s-k-y-l-i.github.io/discord-themes/Theme%20code/transparent-popups.css');
+@import url("https://s-k-y-l-i.github.io/discord-themes/Theme%20code/transparent-popups.css");
 
-
-
-/* Don't Add @Imports Here */
+/* transparent-popups Config */
+:root{
+    --blur-popup: 40px; /*Popup blur size*/
+    --opacity-popup: 0.6; /*Popup background opacity*/  
+    --radius-popup: 40px; /*Popup border radius*/
+    --radius-context: 20px; /*Context menu popups radius*/
+    /*--pop-up-color: black; /*uncomment for custom Popup color*/ 
+    /*--context-menu-border: 1px solid red; /*uncomment for custom border*/
+}
 
 /* Search as a button  */
 .search_ac353c:not(.open_d3ab4e) > .searchBar__5a20a {
@@ -67,6 +71,7 @@
 .search_ac353c:not(.open_d3ab4e):hover .icon__5c8c7 {
     color: var(--interactive-active);
 }
+
 /* Tabs on Top */
 :root {
     --dm-columns: 4;
@@ -108,16 +113,6 @@
     [class*="content_"] {
         display: none;
     }
-}
-
-/* transparent-popups Config */
-:root{
-    --blur-popup: 40px; /*Popup blur size*/
-    --opacity-popup: 0.6; /*Popup background opacity*/  
-    --radius-popup: 40px; /*Popup border radius*/
-    --radius-context: 20px; /*Context menu popups radius*/
-    /*--pop-up-color: black; /*uncomment for custom Popup color*/ 
-    /*--context-menu-border: 1px solid red; /*uncomment for custom border*/
 }
 
 /* Spotifly player */
@@ -239,61 +234,4 @@
 #user-context-close-dm[class*="focused-"], #user-context-remove-friend[class*="focused-"], #user-context-block[class*="focused-"] {
     background-color: var(--button-danger-background);
     color: var(--white-500);   
-}
-
-/* Don't TOUCH!!!! */
-:root {
-    /* Guildlist */
-    --guildicon-size: 48;
-    --enable-if-using-favorites-experiment: 0; /* boolean */
-    --guildlist-collapse: 0;
-    /* Channel sidebar */
-    --slide-window-on-hover: 1; /* boolean */
-    --float-sidebar-width: 48;
-    --sidebar-hover-width: 240px;
-    --sidebar-hover-delay: 0.2s;
-    --sidebar-transition-duration: 0.4s;
-    --sidebar-window-gap: 8px;
-    --sidebar-border-radius: 8px;
-    --sidebar-usersettings-width: 66px;
-    /* Memberlist */
-    --float-members-width: 65px;
-    --members-hover-width: 240px;
-    --members-hover-delay: 1.5s;
-    --members-transition-duration: 0.4s;
-    /* Channelheader */
-    --topic-opacity: 1;
-    --toolbar-visibility: flex; /* [flex][none] */
-    /* Textarea buttons */ /* [flex][none] */
-    --textarea-buttons-gif: flex;
-    --textarea-buttons-sticker: flex;
-    --textarea-buttons-gift: none;
-    /* Theme compatibility */
-    /* --float-guildlist-width-correction: 0px; */
-}
-
-/* The variables are used when the window is at the set sizes, each media query can be edited/deleted */
-@media (max-width:700px) {
-    :root {
-        --topic-opacity: 0;
-        --toolbar-visibility: none;
-        --textarea-buttons-gif: none;
-        --textarea-buttons-sticker: none;
-    }
-}
-@media (max-width:500px) {
-    :root {
-        --guildicon-size: 40;
-        --float-members-width: 0;
-    }
-}
-@media (max-width:400px) {
-    :root {
-        --float-sidebar-width: 0;
-    }
-}
-@media (max-width:300px) {
-    :root {
-        --guildlist-collapse: 1;
-    }
 }
