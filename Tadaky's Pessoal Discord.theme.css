@@ -1,6 +1,6 @@
 /*
  * @name Tadaky's Pessoal Theme
- * @version 0.6.2
+ * @version 0.6.3
  * @author Tadaky#0000
  * @authorId 353673189240340482
  * @description Essentials Discord CSS.
@@ -137,8 +137,10 @@
     }
 }
 
-/* transparent-popups and Configs */
+/* transparent-popups */
 @import url('https://s-k-y-l-i.github.io/discord-themes/Theme%20code/transparent-popups.css');
+
+/* transparent-popups Configs */
 :root{
     --blur-popup: 40px; /*Popup blur size*/
     --opacity-popup: 0.6; /*Popup background opacity*/  
@@ -152,6 +154,7 @@
 .messagesWrapper_ea2b0b {
     overflow: hidden;
 }
+
 .newMessagesBar__8b6d7 {
     top: -48px;
     height: 72px;
@@ -160,6 +163,7 @@
     box-shadow: none;
     border-radius: 0;
 }
+
 .newMessagesBar__8b6d7::before {
     content: '';
     background: var(--brand-experiment);
@@ -169,6 +173,7 @@
     height: 32px;
     border-radius: 12px;
 }
+
 .newMessagesBar__8b6d7:hover {
     top: -12px;
 }
@@ -207,9 +212,11 @@
   transition: translate ease-in-out 0.3s;
   translate: calc(100% - 8px);
 }
+
 [class^=channelTextArea_] [class^=buttons_]:hover {
   translate: 0;
 }
+
 [class^=channelTextArea_] [class^=buttons_]::before,
 [class^=channelTextArea_] [class^=buttons_]::after {
     content: "≡";
@@ -222,9 +229,11 @@
     height:100%;
     transition: opacity 0.3s 0.3s linear;
 }
+
 [class^=channelTextArea_] [class^=buttons_]::before{
     color:transparent;
 }
+
 [class^=channelTextArea_] [class^=buttons_]:hover::after {
     content:"";
     opacity: 0;
