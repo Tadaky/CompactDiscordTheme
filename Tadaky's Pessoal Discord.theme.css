@@ -1,6 +1,6 @@
 /*
  * @name Tadaky's Pessoal
- * @version 0.7.1
+ * @version 0.7.2
  * @author Tadaky#0000
  * @authorId 353673189240340482
  * @description Essentials Discord CSS.
@@ -252,6 +252,11 @@
     display: none;
 }
 
+/* Full Height Gif Menu */
+/* note: you can resize horizontally by dragging the edge */
+[class^="positionContainer_"] {
+  height: calc(100vh - 180px);
+}
 /* hide reactions in a channel */
 [data-list-id="chat-messages"]  li[id^="chat-messages-CHANNELID"] [id^="message-accessories"] {
     display: none;
