@@ -1,6 +1,6 @@
 /*
  * @name Tadaky's Pessoal
- * @version 0.7.2
+ * @version 0.7.9
  * @author Tadaky#0000
  * @authorId 353673189240340482
  * @description Essentials Discord CSS.
@@ -33,7 +33,7 @@
 @import url("https://seele1306.github.io/Snippets/MessageSection/import.css");
 
 /* Spotifly player */
-@import url("https://raw.githubusercontent.com/Panniku/vc-snippets/main/BetterSpotifyPlayer.css");
+/*@import url("https://raw.githubusercontent.com/Panniku/vc-snippets/main/BetterSpotifyPlayer.css");
 
 /* MinimalAuthApps */
 @import url("https://minidiscordthemes.github.io/Snippets/MinimalAuthApps/main.css");
@@ -208,7 +208,7 @@
 [class^=channelTextArea_] [class^=buttons_]::before,
 [class^=channelTextArea_] [class^=buttons_]::after {
     content: "≡";
-    font-size:2rem;
+    font-size:1.4rem;
     color: var(--interactive-normal);
     display:flex;
     align-items:center;
@@ -260,4 +260,61 @@
 /* hide reactions in a channel */
 [data-list-id="chat-messages"]  li[id^="chat-messages-CHANNELID"] [id^="message-accessories"] {
     display: none;
+}
+
+/* Updated Aligned Chatbox */
+:is(main,section)[class^=chatContent] > form,
+form > div[class^=submitContainer] {
+  /* align chatbox */
+  padding: 0px;
+  > div { margin-bottom: 0px; border-radius: 0px; }
+  > div[class^=channelTextArea] {
+    > div { margin: 0px;  }
+    > div > div {
+      padding-top: 4px;
+      min-height: 49px;
+      border-radius: 0px;
+    }
+  }
+
+  /* move slowmode/typing indicator to match */
+  > div[class^=typing] {
+    top: -24px;
+    right: calc(var(--custom-index-scrollbar-margin) * 2 + var(--custom-index-scrollbar-width));
+    margin-left: auto;
+    width: fit-content;
+    padding-left: 2px;
+    padding-right: 9px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: var(--channeltextarea-background);
+  }
+  /* make scrollbar meet chatbox */
+  &::after { display: none; }
+
+  /* fix replies */
+  > div > div > div[class^=attachedBars] {
+    min-height: unset !important;
+    padding-bottom: 4px;
+  }
+}
+
+/* jump to present */
+div[class^=jumpToPresentBar] {
+  left: 0; right: unset;
+  border-radius: 0px 8px 0px 0px;
+  background-color: var(--channeltextarea-background);
+  > button[class^=barButtonMain] {
+    flex: 0 0 auto;
+    display: none;
+  }
+}
+
+/* Hide chat box if no permissions to write */
+[class*=channelTextAreaDisabled] {
+    display: none!important;
+}
+
+/* Normal Discord */
+[class^="positionContainer_"] {
+  height: calc(111vh - 180px);
 }
