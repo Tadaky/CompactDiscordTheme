@@ -1,6 +1,6 @@
 /*
  * @name Tadaky's Pessoal
- * @version 0.7.9
+ * @version 0.8.2
  * @author Tadaky#0000
  * @authorId 353673189240340482
  * @description Essentials Discord CSS.
@@ -143,31 +143,6 @@
     clip-path: inset(0);
 }
 
-/* Hide New Messages Bar Until Hovered*/
-.messagesWrapper_ea2b0b {
-    overflow: hidden;
-}
-.newMessagesBar__8b6d7 {
-    top: -48px;
-    height: 72px;
-    transition: top 0.2s ease;
-    background: none;
-    box-shadow: none;
-    border-radius: 0;
-}
-.newMessagesBar__8b6d7::before {
-    content: '';
-    background: var(--brand-experiment);
-    box-shadow: var(--elevation-low);
-    width: 100%;
-    position: absolute;
-    height: 32px;
-    border-radius: 12px;
-}
-.newMessagesBar__8b6d7:hover {
-    top: -12px;
-}
-
 /* Improved Dashless Channel Names */
 @font-face
  { font-family: "Twemoji Mozilla";
@@ -207,8 +182,8 @@
 }
 [class^=channelTextArea_] [class^=buttons_]::before,
 [class^=channelTextArea_] [class^=buttons_]::after {
-    content: "≡";
-    font-size:1.4rem;
+    content: url("https://emoji.gg/assets/emoji/4552-sus-dance.gif");
+    font-size:2rem;
     color: var(--interactive-normal);
     display:flex;
     align-items:center;
@@ -252,14 +227,14 @@
     display: none;
 }
 
-/* Full Height Gif Menu */
-/* note: you can resize horizontally by dragging the edge */
-[class^="positionContainer_"] {
-  height: calc(100vh - 180px);
-}
 /* hide reactions in a channel */
 [data-list-id="chat-messages"]  li[id^="chat-messages-CHANNELID"] [id^="message-accessories"] {
     display: none;
+}
+
+/* Full Height Gif Menu */
+[class^="positionContainer_"] {
+  height: calc(100vh - 180px);
 }
 
 /* Updated Aligned Chatbox */
@@ -288,6 +263,7 @@ form > div[class^=submitContainer] {
     border-radius: 8px 8px 0px 0px;
     background-color: var(--channeltextarea-background);
   }
+  
   /* make scrollbar meet chatbox */
   &::after { display: none; }
 
@@ -314,7 +290,7 @@ div[class^=jumpToPresentBar] {
     display: none!important;
 }
 
-/* Normal Discord */
+/* Gifs Window */
 [class^="positionContainer_"] {
   height: calc(111vh - 180px);
 }
