@@ -182,7 +182,7 @@
 }
 [class^=channelTextArea_] [class^=buttons_]::before,
 [class^=channelTextArea_] [class^=buttons_]::after {
-    content: url("https://emoji.gg/assets/emoji/4552-sus-dance.gif");
+    content: "◎";
     font-size:2rem;
     color: var(--interactive-normal);
     display:flex;
@@ -251,28 +251,6 @@ form > div[class^=submitContainer] {
       border-radius: 0px;
     }
   }
-
-  /* move slowmode/typing indicator to match */
-  > div[class^=typing] {
-    top: -24px;
-    right: calc(var(--custom-index-scrollbar-margin) * 2 + var(--custom-index-scrollbar-width));
-    margin-left: auto;
-    width: fit-content;
-    padding-left: 2px;
-    padding-right: 9px;
-    border-radius: 8px 8px 0px 0px;
-    background-color: var(--channeltextarea-background);
-  }
-  
-  /* make scrollbar meet chatbox */
-  &::after { display: none; }
-
-  /* fix replies */
-  > div > div > div[class^=attachedBars] {
-    min-height: unset !important;
-    padding-bottom: 4px;
-  }
-}
 
 /* jump to present */
 div[class^=jumpToPresentBar] {
