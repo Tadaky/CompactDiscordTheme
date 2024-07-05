@@ -1,9 +1,9 @@
 /*
  * @name Tadaky's Pessoal
- * @version 0.8.2
+ * @version 0.8.4
  * @author Tadaky#0000
  * @authorId 353673189240340482
- * @description Essentials Discord CSS.
+ * @description Tema feito para uso pessoal, não ofereço nunhum tipo de suporte.
  * @source https://github.com/Tadaky/CompactDiscordTheme/blob/main/Compact%20Discord.theme.css
  * @invite hfDt9Yf69M
  * @website https://github.com/Tadaky
@@ -182,7 +182,7 @@
 }
 [class^=channelTextArea_] [class^=buttons_]::before,
 [class^=channelTextArea_] [class^=buttons_]::after {
-    content: "◎";
+    content: "♨️";
     font-size:2rem;
     color: var(--interactive-normal);
     display:flex;
