@@ -1,6 +1,6 @@
 /*
  * @name Tadaky's Pessoal
- * @version 0.8.4
+ * @version 0.8.6
  * @author Tadaky#0000
  * @authorId 353673189240340482
  * @description Tema feito para uso pessoal, não ofereço nunhum tipo de suporte.
@@ -183,7 +183,7 @@
 [class^=channelTextArea_] [class^=buttons_]::before,
 [class^=channelTextArea_] [class^=buttons_]::after {
     content: "♨️";
-    font-size:2rem;
+    font-size:1rem;
     color: var(--interactive-normal);
     display:flex;
     align-items:center;
