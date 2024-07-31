@@ -268,6 +268,34 @@ div[class^=jumpToPresentBar] {
     display: none!important;
 }
 
+/* Mac Like Titlebar */
+@import url("https://dyzean.github.io/Tokyo-Night/src/addons/mac-titlebar.css");
+
+  /* Mac Titlebar addons */
+  --close-button-color: #e92a2ade;
+  --maximize-button-color: #f7bc1bde;
+  --minimize-button-color: #12db33de;
+  --button-position: row;
+@import url("https://dyzean.github.io/Tokyo-Night/src/addons/revert-rebrand.css");
+@import url("https://nyri4.github.io/Discolored/main.css");
+}
+
+/* Watermark */
+@import url("https://dyzean.github.io/Tokyo-Night/src/addons/revert-rebrand.css");
+@import url("https://nyri4.github.io/Discolored/main.css");
+.theme-dark {
+}
+.wordmarkWindows_a934d8 svg {
+  position: fixed;
+  top: 3px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.typeWindows_a934d8 {
+  z-index: 1;
+  background-color: var(--background-secondary-alt);
+}
+
 /* Gifs Window */
 [class^="positionContainer_"] {
   height: calc(111vh - 180px);
