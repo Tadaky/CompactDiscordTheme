@@ -1,6 +1,6 @@
 /*
  * @name Tadaky's Pessoal
- * @version 0.8.8b
+ * @version 0.9.0
  * @author Tadaky#0000
  * @authorId 353673189240340482
  * @description Tema feito para uso pessoal, não ofereço nunhum tipo de suporte.
@@ -28,12 +28,6 @@
 
 /* Add Server Dark Mode */
 @import url("https://neodymium7.github.io/BetterDiscordStuff/CSS/AddServerDarkMode.css");
-
-/* Message Section */
-@import url("https://seele1306.github.io/Snippets/MessageSection/import.css");
-
-/* Spotifly player */
-/*@import url("https://raw.githubusercontent.com/Panniku/vc-snippets/main/BetterSpotifyPlayer.css");
 
 /* MinimalAuthApps */
 @import url("https://minidiscordthemes.github.io/Snippets/MinimalAuthApps/main.css");
@@ -70,49 +64,6 @@
 }
 .search_ac353c:not(.open_d3ab4e):hover .icon__5c8c7 {
     color: var(--interactive-active);
-}
-
-/* Tabs on Top */
-:root {
-    --dm-columns: 4;
-}
-[class^=privateChannels_] [class^=content_] {
-    display: grid;
-    height: unset !important;
-    grid-template-columns: repeat(var(--dm-columns), 1fr);
-    &> * {
-        overflow: hidden;
-        grid-column: 1 / calc(var(--dm-columns) + 1);
-    }
-}
-[class^=channel_]:has(
-    [href="/channels/@me"],
-    [href="/library"],
-    [href="/shop"],
-    [href="/store"],
-    [href="/family-center"],
-    [href="/message-requests"]
-) {
-    grid-column: auto;
-    [class*="linkButton"] {
-        padding-right: 0;
-    }
- 
-    [class*="link_"] {
-        justify-content: center;
-        gap: 0;
-    }
-    [class*="avatar_"] {
-        margin: 0;
-        width: unset;
-    }
-    [class*="avatarWithText_"] {
-        flex-grow: unset;
-    }
-    
-    [class*="content_"] {
-        display: none;
-    }
 }
 
 /* Spotifly player */
@@ -232,57 +183,7 @@
     display: none;
 }
 
-/* Full Height Gif Menu */
-[class^="positionContainer_"] {
-  height: calc(100vh - 180px);
-}
-
-/* Updated Aligned Chatbox */
-:is(main,section)[class^=chatContent] > form,
-form > div[class^=submitContainer] {
-  /* align chatbox */
-  padding: 0px;
-  > div { margin-bottom: 0px; border-radius: 0px; }
-  > div[class^=channelTextArea] {
-    > div { margin: 0px;  }
-    > div > div {
-      padding-top: 4px;
-      min-height: 49px;
-      border-radius: 0px;
-    }
-  }
-
-/* jump to present */
-div[class^=jumpToPresentBar] {
-  left: 0; right: unset;
-  border-radius: 0px 8px 0px 0px;
-  background-color: var(--channeltextarea-background);
-  > button[class^=barButtonMain] {
-    flex: 0 0 auto;
-    display: none;
-  }
-}
-
-/* Hide chat box if no permissions to write */
-[class*=channelTextAreaDisabled] {
-    display: none!important;
-}
-
-/* Mac Like Titlebar */
-@import url("https://dyzean.github.io/Tokyo-Night/src/addons/mac-titlebar.css");
-
-  /* Mac Titlebar addons */
-  --close-button-color: #e92a2ade;
-  --maximize-button-color: #f7bc1bde;
-  --minimize-button-color: #12db33de;
-  --button-position: row;
-@import url("https://dyzean.github.io/Tokyo-Night/src/addons/revert-rebrand.css");
-@import url("https://nyri4.github.io/Discolored/main.css");
-}
-
 /* Watermark */
-@import url("https://dyzean.github.io/Tokyo-Night/src/addons/revert-rebrand.css");
-@import url("https://nyri4.github.io/Discolored/main.css");
 .theme-dark {
 }
 .wordmarkWindows_a934d8 svg {
@@ -298,5 +199,5 @@ div[class^=jumpToPresentBar] {
 
 /* Gifs Window */
 [class^="positionContainer_"] {
-  height: calc(111vh - 180px);
+  height: calc(111vh - 200px);
 }
