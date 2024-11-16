@@ -1,6 +1,6 @@
 /*
  * @name Tadaky's Pessoal
- * @version 0.9.1
+ * @version 0.10.2
  * @author Tadaky#0000
  * @authorId 353673189240340482
  * @description Tema feito para uso pessoal, não ofereço nunhum tipo de suporte.
@@ -125,7 +125,7 @@
 
 /* Hide Bottm Button */
 [class^=channelTextArea_] [class^=buttons_] {
-  transition: translate ease-in-out 0.3s;
+  transition: translate ease-in-out 0s;
   translate: calc(100% - 8px);
 }
 [class^=channelTextArea_] [class^=buttons_]:hover {
@@ -133,15 +133,15 @@
 }
 [class^=channelTextArea_] [class^=buttons_]::before,
 [class^=channelTextArea_] [class^=buttons_]::after {
-    content: "♨️";
-    font-size:1rem;
+    content: "Ctrl+E";
+    font-size:.89rem;
     color: var(--interactive-normal);
     display:flex;
     align-items:center;
     position:absolute;
     right:100%;
     height:100%;
-    transition: opacity 0.3s 0.3s linear;
+    transition: opacity 0.1s 0.1s linear;
 }
 [class^=channelTextArea_] [class^=buttons_]::before{
     color:transparent;
@@ -183,13 +183,13 @@
     display: none;
 }
 
-/* Watermark */
+/* Discord Logo */
 .theme-dark {
 }
 .wordmarkWindows_a934d8 svg {
   position: fixed;
-  top: 3px;
-  left: 50%;
+  top: 4px;
+  left: 94.3%;
   transform: translate(-50%);
 }
 .typeWindows_a934d8 {
@@ -203,14 +203,37 @@
 }
 
 /* Collapse Discover */
-.footer_aa1bff {
+.footer_f8ec41 {
     height: 10px;
     transition-duration: 100ms;
     transition-delay: 2000ms;
 }
 
-.footer_aa1bff:hover {
+.footer_f8ec41:hover {
     height: 56px;
     transition-duration: 100ms;
     transition-delay: 0ms;
+}
+
+/* Hide AppLauncher+Emoji+Gif+Sticker */
+.iconWrapper_fc4f04[aria-label="Bookmarks"] {
+    display: none;
+}
+.iconWrapper_fc4f04[aria-label="Help"] {
+    display: none;
+}
+.iconWrapper_fc4f04[aria-label="Notification Settings"] {
+    display: none;
+}
+.buttons_bdf0de > [aria-label="Send a gift"] {
+    display: none;
+}
+.button_dd4f85[aria-label="Open GIF picker"] {
+    display: none;
+}
+.button_dd4f85[aria-label="Open sticker picker"] {
+    display: none;
+}
+.emojiButtonNormal_d91a75[aria-label="Select emoji"] {
+    display: none;
 }
