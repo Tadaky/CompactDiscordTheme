@@ -216,6 +216,9 @@
 }
 
 /* Hide AppLauncher+Emoji+Gif+Sticker */
+.channelAppLauncher_df39bd {
+    display: none;
+}
 .iconWrapper_fc4f04[aria-label="Bookmarks"] {
     display: none;
 }
