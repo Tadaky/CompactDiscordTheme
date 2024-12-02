@@ -35,6 +35,9 @@
 /* Collapse Channel */
 @import url("https://tadaky.github.io/collapse-channel-discord/main.css");
 
+/* Remove Discord Stuffs */
+@import url("https://tadaky.github.io/remove-discord-stuffs/remove.css");
+
 /* transparent-popups */
 @import url("https://s-k-y-l-i.github.io/discord-themes/Theme%20code/transparent-popups.css");
 
@@ -216,30 +219,4 @@
     height: 56px;
     transition-duration: 100ms;
     transition-delay: 0ms;
-}
-
-/* Hide AppLauncher+Emoji+Gif+Sticker */
-.channelAppLauncher_df39bd {
-    display: none;
-}
-.iconWrapper_fc4f04[aria-label="Bookmarks"] {
-    display: none;
-}
-.iconWrapper_fc4f04[aria-label="Help"] {
-    display: none;
-}
-.iconWrapper_fc4f04[aria-label="Notification Settings"] {
-    display: none;
-}
-.buttons_bdf0de > [aria-label="Send a gift"] {
-    display: none;
-}
-.button_dd4f85[aria-label="Open GIF picker"] {
-    display: none;
-}
-.button_dd4f85[aria-label="Open sticker picker"] {
-    display: none;
-}
-.emojiButtonNormal_d91a75[aria-label="Select emoji"] {
-    display: none;
 }
