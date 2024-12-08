@@ -33,7 +33,7 @@
 @import url("https://minidiscordthemes.github.io/Snippets/MinimalAuthApps/main.css");
 
 /* Collapse Channel */
-@import url("https://tadaky.github.io/collapse-channel-discord/main.css");
+@import url("https://tadaky.github.io/collapse-channel-discord/collapse.css");
 
 /* Remove Discord Stuffs */
 @import url("https://tadaky.github.io/remove-discord-stuffs/remove.css");
@@ -206,17 +206,4 @@
 /* Gifs Window */
 [class^="positionContainer_"] {
   height: calc(111vh - 200px);
-}
-
-/* Collapse Discover */
-.footer_f8ec41 {
-    height: 10px;
-    transition-duration: 100ms;
-    transition-delay: 2000ms;
-}
-
-.footer_f8ec41:hover {
-    height: 56px;
-    transition-duration: 100ms;
-    transition-delay: 0ms;
 }
